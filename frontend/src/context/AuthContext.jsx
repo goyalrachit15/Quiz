@@ -15,7 +15,7 @@ export const AuthProvider = ({ children }) => {
 
   const login = async (email, password) => {
     try {
-      await axios.post('http://localhost:5000/api/auth/login', { email, password });
+      await axios.post('https://quiz-n6d2.onrender.com/api/auth/login', { email, password });
       setUser(email);
       localStorage.setItem('user', JSON.stringify(email)); 
     } catch (error) {
@@ -26,7 +26,7 @@ export const AuthProvider = ({ children }) => {
   const register = async (email, password) => {
     try {
       console.log(email);
-      await axios.post('http://localhost:5000/api/auth/register', { email, password });
+      await axios.post('https://quiz-n6d2.onrender.com/api/auth/register', { email, password });
       setUser(email);
       localStorage.setItem('user', JSON.stringify(email));
     } catch (error) {
